@@ -1,0 +1,483 @@
+<div id="mk_keyboard" class="greek">
+    <div class="mk_keyboard_toolbar">
+        <button onclick="MK_KEYBOARD.closeOpenKeyboard();" class="right btn">Close</button>
+        <div class="clear"></div>
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Α')" value="Α">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ά')" value="Ά">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Β')" value="Β">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Γ')" value="Γ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Δ')" value="Δ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ε')" value="Ε">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Έ')" value="Έ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ζ')" value="Ζ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Η')" value="Η">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ή')" value="Ή">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Θ')" value="Θ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ι')" value="Ι">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ί')" value="Ί">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Κ')" value="Κ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Λ')" value="Λ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Μ')" value="Μ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ν')" value="Ν">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ξ')" value="Ξ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ο')" value="Ο">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ό')" value="Ό">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Π')" value="Π">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ρ')" value="Ρ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ῥ')" value="Ῥ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Σ')" value="Σ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Τ')" value="Τ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Υ')" value="Υ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ύ')" value="Ύ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Φ')" value="Φ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Χ')" value="Χ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ψ')" value="Ψ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ω')" value="Ω">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ώ')" value="Ώ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ϝ')" value="Ϝ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ϛ')" value="Ϛ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ϟ')" value="Ϟ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('Ϡ')" value="Ϡ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ʹ')" value="ʹ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('·')" value="·">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('α')" value="α">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ά')" value="ά">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('β')" value="β">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('γ')" value="γ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('δ')" value="δ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ε')" value="ε">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('έ')" value="έ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ζ')" value="ζ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('η')" value="η">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ή')" value="ή">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('θ')" value="θ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ι')" value="ι">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ί')" value="ί">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('κ')" value="κ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('λ')" value="λ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('μ')" value="μ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ν')" value="ν">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ξ')" value="ξ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ο')" value="ο">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ό')" value="ό">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('π')" value="π">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ρ')" value="ρ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ῥ')" value="ῥ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('σ')" value="σ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('τ')" value="τ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('υ')" value="υ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ύ')" value="ύ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('φ')" value="φ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('χ')" value="χ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ψ')" value="ψ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ω')" value="ω">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ώ')" value="ώ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϝ')" value="ϝ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϛ')" value="ϛ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϟ')" value="ϟ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϡ')" value="ϡ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('͵')" value="͵">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϐ')" value="ϐ">
+        <input type="button" class="eb" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϰ')" value="ϰ">
+        <input type="button" class="eb" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ῤ')" value="ῤ">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ς')" value="ς">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bu" onclick="MK_KEYBOARD.drawSelectedChar('ϕ')" value="ϕ">
+        <input type="button" class="eb" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ed" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾼ')" value="ᾼ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾳ')" value="ᾳ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῌ')" value="ῌ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῃ')" value="ῃ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῼ')" value="ῼ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῳ')" value="ῳ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἀ')" value="Ἀ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἀ')" value="ἀ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾈ')" value="ᾈ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾀ')" value="ᾀ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἐ')" value="Ἐ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἐ')" value="ἐ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἠ')" value="Ἠ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἠ')" value="ἠ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾘ')" value="ᾘ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾐ')" value="ᾐ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἰ')" value="Ἰ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἰ')" value="ἰ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὀ')" value="Ὀ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὀ')" value="ὀ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὐ')" value="ὐ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὠ')" value="Ὠ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὠ')" value="ὠ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾨ')" value="ᾨ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾠ')" value="ᾠ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἁ')" value="Ἁ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἁ')" value="ἁ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾉ')" value="ᾉ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾁ')" value="ᾁ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἑ')" value="Ἑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἑ')" value="ἑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἡ')" value="Ἡ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἡ')" value="ἡ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾙ')" value="ᾙ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾑ')" value="ᾑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἱ')" value="Ἱ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἱ')" value="ἱ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὁ')" value="Ὁ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὁ')" value="ὁ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὑ')" value="Ὑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὑ')" value="ὑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὡ')" value="Ὡ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὡ')" value="ὡ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾩ')" value="ᾩ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾡ')" value="ᾡ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἂ')" value="Ἂ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἂ')" value="ἂ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾊ')" value="ᾊ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾂ')" value="ᾂ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἒ')" value="Ἒ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἒ')" value="ἒ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἢ')" value="Ἢ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἢ')" value="ἢ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾚ')" value="ᾚ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾒ')" value="ᾒ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἲ')" value="Ἲ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἲ')" value="ἲ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὂ')" value="Ὂ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὂ')" value="ὂ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὒ')" value="ὒ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὢ')" value="Ὢ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὢ')" value="ὢ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾪ')" value="ᾪ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾢ')" value="ᾢ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἃ')" value="Ἃ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἃ')" value="ἃ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾋ')" value="ᾋ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾃ')" value="ᾃ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἓ')" value="Ἓ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἓ')" value="ἓ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἣ')" value="Ἣ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἣ')" value="ἣ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾛ')" value="ᾛ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾓ')" value="ᾓ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἳ')" value="Ἳ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἳ')" value="ἳ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὃ')" value="Ὃ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὃ')" value="ὃ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὓ')" value="Ὓ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὓ')" value="ὓ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὣ')" value="Ὣ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὣ')" value="ὣ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾫ')" value="ᾫ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾣ')" value="ᾣ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἄ')" value="Ἄ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἄ')" value="ἄ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾌ')" value="ᾌ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾄ')" value="ᾄ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἔ')" value="Ἔ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἔ')" value="ἔ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἤ')" value="Ἤ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἤ')" value="ἤ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾜ')" value="ᾜ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾔ')" value="ᾔ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἴ')" value="Ἴ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἴ')" value="ἴ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὄ')" value="Ὄ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὄ')" value="ὄ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὔ')" value="ὔ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὤ')" value="Ὤ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὤ')" value="ὤ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾬ')" value="ᾬ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾤ')" value="ᾤ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἅ')" value="Ἅ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἅ')" value="ἅ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾍ')" value="ᾍ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾅ')" value="ᾅ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἕ')" value="Ἕ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἕ')" value="ἕ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἥ')" value="Ἥ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἥ')" value="ἥ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾝ')" value="ᾝ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾕ')" value="ᾕ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἵ')" value="Ἵ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἵ')" value="ἵ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὅ')" value="Ὅ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὅ')" value="ὅ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὕ')" value="Ὕ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὕ')" value="ὕ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὥ')" value="Ὥ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὥ')" value="ὥ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾭ')" value="ᾭ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾥ')" value="ᾥ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἆ')" value="Ἆ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἆ')" value="ἆ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾎ')" value="ᾎ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾆ')" value="ᾆ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἦ')" value="Ἦ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἦ')" value="ἦ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾞ')" value="ᾞ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾖ')" value="ᾖ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἶ')" value="Ἶ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἶ')" value="ἶ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὖ')" value="ὖ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὦ')" value="Ὦ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὦ')" value="ὦ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾮ')" value="ᾮ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾦ')" value="ᾦ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἇ')" value="Ἇ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἇ')" value="ἇ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾏ')" value="ᾏ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾇ')" value="ᾇ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἧ')" value="Ἧ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἧ')" value="ἧ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾟ')" value="ᾟ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾗ')" value="ᾗ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ἷ')" value="Ἷ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ἷ')" value="ἷ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὗ')" value="Ὗ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὗ')" value="ὗ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὧ')" value="Ὧ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὧ')" value="ὧ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾯ')" value="ᾯ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾧ')" value="ᾧ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὰ')" value="Ὰ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὰ')" value="ὰ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾲ')" value="ᾲ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὲ')" value="Ὲ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὲ')" value="ὲ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὴ')" value="Ὴ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὴ')" value="ὴ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῂ')" value="ῂ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὶ')" value="Ὶ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὶ')" value="ὶ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὸ')" value="Ὸ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὸ')" value="ὸ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὺ')" value="Ὺ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὺ')" value="ὺ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ὼ')" value="Ὼ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ὼ')" value="ὼ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῲ')" value="ῲ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾶ')" value="ᾶ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾷ')" value="ᾷ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῆ')" value="ῆ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῇ')" value="ῇ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῖ')" value="ῖ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῦ')" value="ῦ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῶ')" value="ῶ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῷ')" value="ῷ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾴ')" value="ᾴ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῄ')" value="ῄ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῴ')" value="ῴ">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῗ')" value="ῗ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῧ')" value="ῧ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῒ')" value="ῒ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῢ')" value="ῢ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ΐ')" value="ΐ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ΰ')" value="ΰ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ᾰ')" value="Ᾰ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾰ')" value="ᾰ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ῐ')" value="Ῐ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῐ')" value="ῐ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ῠ')" value="Ῠ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῠ')" value="ῠ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_input_section">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ᾱ')" value="Ᾱ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ᾱ')" value="ᾱ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ῑ')" value="Ῑ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῑ')" value="ῑ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('Ῡ')" value="Ῡ">
+        <input type="button" class="bt" onclick="MK_KEYBOARD.drawSelectedChar('ῡ')" value="ῡ">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+        <input type="button" class="ec" onclick="MK_KEYBOARD.drawSelectedChar(' ')" value="&nbsp;">
+    </div>
+    <div class="mk_keyboard_footer">
+        <span class="mk_keyboard_copyrights">Eagle Ancient Greek Politonic KeyBoard</span>
+        <div class="clear"></div>
+    </div>
+</div>

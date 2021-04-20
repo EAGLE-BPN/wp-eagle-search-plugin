@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:eagle="http://www.eagle-network.eu/eagle"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.eagle-network.eu/eagle"
+    elementFormDefault="qualified" version="1" id="eagle">
+
+    <xs:element name="eagleObject" type="eagle:eagleEntity">
+        <xs:annotation>
+            <xs:documentation>
+                The EAGLE wrapper object. It contains the following main entities
+                (sub-entities): epigraphy, trismegistos, digitalObject.
+                Such entities share some common properties like resource identifier in D-Net aggregation system, 
+                provenance and original identifier information, Intellectual property right statement.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="recordSourceInfo">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="providerName" type="xs:string"/>
+                    <xs:attribute name="providerAcronym" type="xs:string"/>
+                    <xs:attribute name="providerURI" type="xs:anyURI"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="trismegistosCard">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tmId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Plain Trismegistos number</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="identifiesInscription" minOccurs="1" maxOccurs="unbounded"
+                    type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Relation to an inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="otherRelevantPropertiesFromTrismegistos" minOccurs="0"
+                    maxOccurs="unbounded" type="eagle:TypedStringType">
+                    <xs:annotation>
+                        <xs:documentation>TODO: select information from Trismegistos cards to be put here</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="artifact">
+        <xs:annotation>
+            <xs:documentation>Generic artifact in EAGLE domain</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="artifactType">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="monument"/>
+                            <xs:enumeration value="inscription"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="monumentType" minOccurs="1" maxOccurs="unbounded"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="material" minOccurs="1" maxOccurs="unbounded"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="dimensions" minOccurs="0" maxOccurs="1"
+                    type="eagle:ThreeDimensionsType"/>
+                <xs:element name="decoration" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="stateOfPreservation" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="originDating" minOccurs="0" maxOccurs="1" type="eagle:DateType"/>
+                <xs:element name="yearOfFinding" minOccurs="0" maxOccurs="1" type="xs:integer"/>
+                <xs:element ref="eagle:findingSpot" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="eagle:conservationPlace" minOccurs="0" maxOccurs="1"/>
+                <xs:sequence>
+                    <xs:element ref="eagle:monument" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Present when artifactType='monument'.
+                                This describes an artifact without any inscription on top of it
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="eagle:inscription" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Present when artifactType='inscription'.
+                                This describes the inscription present on the artifact.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="findingSpot">
+        <xs:annotation>
+            <xs:documentation> structured property locating the place of finding</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="romanProvinceItalicRegion" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="ancientFindSpot" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="modernFindSpot" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="modernCountry" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="modernRegion" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="modernProvince" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="conservationPlace">
+        <xs:annotation>
+            <xs:documentation>Structured property locating the place of conservation (down to position inside a museum)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="conservationCountry" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="conservationRegion" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="conservationCity" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="museum" minOccurs="0" maxOccurs="1" type="eagle:StringWithUriType"/>
+                <xs:element name="position" minOccurs="0" maxOccurs="1" type="xs:string"/>
+                <xs:element name="inventoryNumber" minOccurs="0" maxOccurs="1" type="xs:string"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="inscription">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="eagle:refersTrismegistosCard" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="inscriptionType" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType">
+                    <xs:annotation>
+                        <xs:documentation>Type of the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="engravingTechnique" minOccurs="0" maxOccurs="1"
+                    type="eagle:StringWithUriType">
+                    <xs:annotation>
+                        <xs:documentation>Engraving techniques used for the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="metre" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Metric of the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="fieldSize" minOccurs="0" maxOccurs="1"
+                    type="eagle:TwoDimensionsType">
+                    <xs:annotation>
+                        <xs:documentation>Dimensions of the epigraphic field</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="paleographicCharacteristics"
+                    type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Paleographic Characteristics of the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="letterSize"
+                    type="eagle:TwoDimensionsType">
+                    <xs:annotation>
+                        <xs:documentation>Size of the letter (font)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="inscriptionAuthor" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Author of the inscription, e.g. the creator of the inscription itself, 
+                            or the name of the artist or the name of the artistic/artisan school
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="honorand">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The person to whom the inscription was dedicated and the political/social role/position of the honorand
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="socialStatus" type="xs:string"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="dedicator" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>name of the person who devotes the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="namesMentioned" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>names of the person(s) mentioned in the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="relatedEvent" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>description about the event related to the purpose of the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="placesMentioned" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Placenames mentioned in the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="restorationInfo" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>information regarding whether the inscription has been restored and when</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="doubleSided" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>States whether the inscription is double-sided or not</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="erasures" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>It specifies whether the text of the inscription was damaged on purpose</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="spellingErrors" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>It shows if there are any spelling mistakes on the text of the inscription</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="hasInscriptionVisualRepresentation" type="eagle:StringWithUriType"
+                    minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            D-net identifier of a related digital representation 
+                            (the uri attribute can be used to point a thumbnail for portal convenience)
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="hasTranslation" type="xs:string" minOccurs="0"
+                    maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Translation resource identificator</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="hasTranscription" type="xs:string" minOccurs="0"
+                    maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Translation resource identificator</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="monument">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hasMonumentVisualRepresentation" type="eagle:StringWithUriType"
+                    minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            D-net identifier of a related digital representation 
+                            (the uri attribute can be used to point a thumbnail for portal convenience)
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="refersTrismegistosCard">
+        <xs:annotation>
+            <xs:documentation>*Recommended* references dnetResourceIdentifier of the related trismegistos object</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="tm_id" type="xs:string" use="required">
+                        <xs:annotation>
+                            <xs:documentation>the plain trismegistos number</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="documentalManifestation">
+        <xs:annotation>
+            <xs:documentation>Container for documents describing the inscription (i.e. transcriptions and translations)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="documentType">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="transcription"/>
+                            <xs:enumeration value="translation"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:choice>
+                    <xs:element ref="eagle:transcription"/>
+                    <xs:element ref="eagle:translation"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="visualRepresentation">
+        <xs:annotation>
+            <xs:documentation>Digital image representing of an EAGLE artifact/monument or context</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="representationType" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Image type among {Drawing, Photo, Computer graphics, Digitized literature, Video}</xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Image"/>
+                            <xs:enumeration value="Drawing"/>
+                            <xs:enumeration value="Digitizad literature"/>
+                            <xs:enumeration value="Computer graphic"/>
+                            <xs:enumeration value="Video"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="url" minOccurs="1" maxOccurs="1" type="xs:anyURI"/>
+                <xs:element name="thumbnail" minOccurs="0" maxOccurs="1" type="xs:anyURI"/>
+                <xs:element name="author" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="visualRepresentationIpr" type="eagle:StringWithUriType"
+                    minOccurs="1" maxOccurs="1"/>
+                <xs:element name="creationDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="quality" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="isRepresentationOf" minOccurs="0" maxOccurs="unbounded"
+                    type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>D-net identifier of a physical object the picture refers to</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="info3D" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Present only if the visual representation is a 3D rendering (i.e. computer graphics)</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="acquisitionTechnology" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="processingInfo" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="horizontalResolution" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="verticalResolution" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="modelDimensions" type="eagle:ThreeDimensionsType"
+                                minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="modelArea" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="modelPerimeter" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="infoVideo" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Present only if the visual representation is a video resource (i.e. video)</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="duration" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="resolution" type="xs:string" minOccurs="0"
+                                maxOccurs="1"/>
+                            <xs:element name="rate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="translation">
+        <xs:annotation>
+            <xs:documentation>
+                Translation page from media wiki. 
+                Each page contains one or more translations in one or more languages. 
+                Each page reports the local identifiers of the inscriptions to which is referred.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="content" type="eagle:StringWithLanguageType"/>
+                <xs:element name="url" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="author" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="translationIpr" type="eagle:StringWithUriType" minOccurs="1"
+                    maxOccurs="1"/>
+                <xs:element name="publicationTitle" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="publicationYear" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="publicationAuthor" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="publicationPlace" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="isTranslationOf" minOccurs="1" maxOccurs="unbounded"
+                    type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="transcription">
+        <xs:annotation>
+            <xs:documentation>Transcription entity built from information contained inside a given epidoc file</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="text">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type">
+                                    <xs:annotation>
+                                        <xs:documentation>Type of the transcription (sic|expanded|marked-up)</xs:documentation>
+                                    </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="sic"/>
+                                            <xs:enumeration value="expanded-integrated"/>
+                                            <xs:enumeration value="marked-up"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <xs:attribute name="lang" type="xs:string"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="criticalApparatus" minOccurs="0" maxOccurs="unbounded"
+                    type="xs:string"/>
+                <xs:element name="bibliography" minOccurs="0" maxOccurs="unbounded"
+                    type="eagle:StringWithUriType"/>
+                <xs:element name="commentary" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+                <xs:element name="isTranscriptionOf" minOccurs="1" maxOccurs="unbounded"
+                    type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="eagleEntity">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="dnetResourceIdentifier" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Unique resource identifier internal to D-Net infrastructure.
+                        This property is obtained by concatenating the content provider ID and the
+                        record ID local to the identifier. (CP_ID::OBJECT_ID)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element ref="eagle:recordSourceInfo">
+                <xs:annotation>
+                    <xs:documentation>
+                        Original identifier locally valid at the content provider.
+                        Additional information about record ownership are provided as attributes (provideURI, providerAcronym, providerName).
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="editingInfo" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Information about metadata editor/curator and time of the last modification</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="dateEdited" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="metadataEditor" type="xs:string" minOccurs="0"
+                            maxOccurs="1"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="metadataIpr" minOccurs="0" maxOccurs="1"
+                type="eagle:StringWithUriType">
+                <xs:annotation>
+                    <xs:documentation>Intellectual property right statement assigned to the content by each Content Provider.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="title" minOccurs="0" maxOccurs="unbounded"
+                type="eagle:StringWithLanguageType"/>
+            <xs:element name="description" minOccurs="0" maxOccurs="unbounded"
+                type="eagle:StringWithLanguageType"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="entityType">
+                <xs:annotation>
+                    <xs:documentation>Entity type describing the following xs:choice</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="trismegistos card"/>
+                        <xs:enumeration value="artifact"/>
+                        <xs:enumeration value="digital representation"/>
+                        <xs:enumeration value="documental manifestation"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:choice>
+                <xs:element ref="eagle:trismegistosCard">
+                    <xs:annotation>
+                        <xs:documentation>Trismegistos card entity</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="eagle:visualRepresentation"/>
+                <xs:element ref="eagle:artifact"/>
+                <xs:element ref="eagle:documentalManifestation" minOccurs="0" maxOccurs="1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute use="optional" name="notBefore-custom" type="eagle:CustomDateType">
+                    <xs:annotation>
+                        <xs:documentation>Defines lower-end for date ranges</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute use="optional" name="notAfter-custom" type="eagle:CustomDateType">
+                    <xs:annotation>
+                        <xs:documentation>Defines upper-end for date ranges</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="datingMethod" type="xs:anyURI">
+                    <xs:annotation>
+                        <xs:documentation>URI of dating method (e.g. to wikipedia)</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="evidence" type="xs:string"/>
+                <xs:attribute name="period" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>URI to Eagle wiki dating period</xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="CustomDateType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+            <xs:pattern value="\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TwoDimensionsType">
+        <xs:annotation>
+            <xs:documentation>Defines a type for two dimensional mesures (whenever depth is not taken into account)</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="width" type="xs:decimal"/>
+            <xs:element name="height" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="unit" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="ThreeDimensionsType">
+        <xs:annotation>
+            <xs:documentation>Three dimensional measures: extends 2D dimensions type by adding the depth measure</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="eagle:TwoDimensionsType">
+                <xs:sequence>
+                    <xs:element name="depth" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StringWithUriType">
+        <xs:annotation>
+            <xs:documentation>
+                Defines the type for an (untyped) string referencing an external URI (e.g. a vocabulary term in Tematres)
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="uri" type="xs:anyURI"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="StringWithLanguageType">
+        <xs:annotation>
+            <xs:documentation>Defines the type for any textual element characterized by a language attribute</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="TypedStringType">
+        <xs:annotation>
+            <xs:documentation>Defines the type for any textual element characterized by a language attribute</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

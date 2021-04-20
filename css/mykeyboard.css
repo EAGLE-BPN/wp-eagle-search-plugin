@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-mar-2016, 14.26.03
+    Author     : mikidg1984
+*/
+.right{float: right;}
+.left{float: left;}
+.clear{clear: both;}
+div#mk_keyboard{
+    background: transparent;
+    text-align: center;
+}
+div#mk_keyboard input{
+    background: ghostwhite;
+    cursor: pointer;
+    border: none;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    transition: width 0.5s,font-size 0.5s,border-radius 0.5s;
+    -webkit-transition: width 0.5s,font-size 0.5s,border-radius 0.5s; /* Safari */
+    font-size: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: none;
+}
+div#mk_keyboard input.bt:hover,
+div#mk_keyboard input.bu:hover{
+   /*background: antiquewhite;*/
+    width:40px;
+    height: 40px;
+    font-size: 32px;
+    border-radius: 10px;
+}
+div.ui-widget-content{
+    border: none;
+    background: transparent;
+}
+div.mk_keyboard_input_section{
+    display: table;
+    border: none;
+    margin: auto;
+    background: ghostwhite;
+}
+div.mk_keyboard_input_section:first-child{
+    border-top-left-radius: -20px;
+    border-top-right-radius: -20px;
+    padding: 0px 15px 0px 15px
+}
+div.mk_keyboard_input_section:last-child{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+div.mk_keyboard_toolbar{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    background: #808078;
+}
+div.mk_keyboard_footer{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    background: #808078;
+    text-align: center;
+    padding-top: 10px;
+}
+div.mk_keyboard_footer mk_keyboard_copyrights{
+    color: #fff;
+}
+div.mk_keyboard_toolbar button{
+    padding: 5px 10px;
+    background-color: #808078;
+    border-radius: 5px;
+    color: #FFF;
+    border: 1px solid #808078;
+    cursor: pointer;
+}
+div.mk_keyboard_toolbar button:hover{
+    background-color: #898989;
+}
+div#draggableKey{
+    width: 490px!important;
+    background: ghostwhite;
+    position:absolute!important;
+    z-index: 99999999999;
+}
+
+/*HEBREW*/
+div#mk_keyboard.hebrew input{
+    background: ghostwhite;
+    cursor: pointer;
+    border: none;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    transition: width 0.5s,font-size 0.5s,border-radius 0.5s;
+    -webkit-transition: width 0.5s,font-size 0.5s,border-radius 0.5s; /* Safari */
+    font-size: 18px;
+    width: 22px;
+    height: 22px;
+    border-radius: none;
+}
+div#mk_keyboard.hebrew td{
+    color: #808078;
+    font-size: 9px;
+    font-style: italic;
+}

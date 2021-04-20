@@ -1,0 +1,28 @@
+fieldset.simple-search input#mysearch{
+    width: 75%;
+}
+#appendResponse ul li:hover,#appendResponseSaved ul li:hover,#researchListPage li:hover,#objectListPage li:hover,#savedElementList li span:hover{
+    color: blue;
+}
+#appendResponse ul li,#appendResponseSaved ul li,#objectListPage li,#researchListPage li,#savedElementList li span{
+    cursor: pointer;
+}
+label.objectDetailField{
+    font-size: 16px;
+    font-weight: bold;
+}
+span.objectDetailValue{
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+}
+#appendResponseDetails legend,#appendResponseSaved legend,#appendResponseSavedDetails legend{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#appendResponseDetails h5,#appendResponseSaved h5,#appendResponseSavedDetails h5{
+    margin: 0px 0px 15px 0px;
+    font-weight: bold;
+}
